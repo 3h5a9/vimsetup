@@ -49,7 +49,7 @@ autocmd VimEnter * NERDTree | wincmd p
 "autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
 "    \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
 
-
+"Remove Help line(Press ? for help) from the top of NerdTree
 let NERDTreeMinimalUI=1
 
 "End NerdTree Settings
