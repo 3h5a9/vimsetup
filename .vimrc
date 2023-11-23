@@ -50,6 +50,7 @@ autocmd VimEnter * NERDTree | wincmd p
 "    \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
 
 
+let NERDTreeMinimalUI=1
 
 "End NerdTree Settings
 "=====
@@ -106,6 +107,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'yist/vim-codefolding'
   Plug 'ervandew/supertab'
   Plug 'mkitt/tabline.vim'
+  Plug 'jistr/vim-nerdtree-tabs'
 call plug#end()
 
 
