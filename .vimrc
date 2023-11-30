@@ -32,6 +32,8 @@ syntax on
     set guifont=Cousine\ Nerd\ Font,\ Regular
 " Set Innorecase  
     set ignorecase
+" Set WordWrap with perfect indent
+set breakindent
 
 
 
@@ -40,8 +42,10 @@ syntax on
 "============================================================
 nmap <leader>e :NERDTreeToggle<cr>
 let g:NERDTreeWinSize = 30
-let NERDTreeDirArrowExpandable="+"                                                                 
-let NERDTreeDirArrowCollapsible="-"
+
+let NERDTreeDirArrowExpandable = ""
+let NERDTreeDirArrowCollapsible = ""
+let NERDTreeNodeDelimiter = "\x07"
 
 " Start NERDTree and put the cursor back in the other window.
 autocmd VimEnter * NERDTree | wincmd p
@@ -55,7 +59,6 @@ let NERDTreeMinimalUI=1
     nnoremap <C-Down>  :resize -2<CR>
     nnoremap <C-Left>  :vertical resize +2<CR>
     nnoremap <C-Right> :vertical resize -2<CR>
-
 
 "============================================================
 "End NerdTree Settings
@@ -101,9 +104,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-surround'
     Plug 'scrooloose/nerdtree'
     Plug 'scrooloose/syntastic'
-    Plug 'airblade/vim-gitgutter'
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
     Plug 'altercation/vim-colors-solarized'
     Plug 'majutsushi/tagbar'
     Plug 'mattn/emmet-vim'
@@ -124,6 +124,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'mkitt/tabline.vim'
     Plug 'jistr/vim-nerdtree-tabs'
     Plug 'xuyuanp/nerdtree-git-plugin'
+    Plug 'scrooloose/syntastic'
+    Plug 'mhinz/vim-signify'
 call plug#end()
 
 
